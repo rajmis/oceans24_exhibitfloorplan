@@ -1,0 +1,175 @@
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+    
+    #container {
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    #left {
+        display: flex;
+        flex-direction: row;
+        flex: 1; 
+    }
+
+    #left-top {
+        flex: 1; 
+        overflow: auto;
+        background-color: #f0f0f0; 
+        max-height: 50vh;
+        padding-top: 5%;
+    }
+
+    #left-bottom {
+        flex: 1; 
+        background-color: #e0e0e0;
+        padding: 1%; 
+        overflow: auto ;
+    }
+
+    #description {
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        border: none;
+        outline: none;
+        resize: none; 
+        font-size: 14px;
+    }
+
+    #image-container {
+        flex: 1;
+        overflow: auto;
+    }
+}
+
+
+#container {
+    display: flex;
+    height: 100vh;
+    min-width: 100%;
+}
+
+#left {
+    flex-direction: column;
+    flex: 1;
+    width: 100%;
+    background-color: #f0f0f0;
+    padding-top: 2.5%;
+    overflow: auto;
+}
+
+#left-top {
+    flex-direction: column;
+    flex: 1;
+    overflow: auto;
+    background-color: #f0f0f0;
+    max-height: 50vh;
+}
+
+#overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border: 2px solid red;
+    pointer-events: none;
+}
+
+#left-bottom {
+    flex: 0.5;
+    max-height: 50vh;
+    background-color: #e0e0e0;
+    padding: 10px; 
+    overflow: auto;
+}
+
+#image-container {
+    flex-direction: column;
+    flex: 1;
+    position: relative;
+    overflow: auto;
+}
+
+#myImage {
+    height: auto;
+    width: 100%;
+    resize: auto;
+}
+
+#logo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+.logo {
+    max-width: 100%;
+    cursor: pointer;
+    padding: 5px;
+}
+
+#description {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    resize: none; 
+    font-size: 14px;
+}
+
+#search {
+    flex: 0.25;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+
+#search:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+#image-container::-webkit-scrollbar {
+    width: 10px;
+}
+
+#image-container::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+#image-container::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 5px;
+}
+
+#image-container {
+    scrollbar-width: thin;
+}
+
+#image-container::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 5px;
+}
